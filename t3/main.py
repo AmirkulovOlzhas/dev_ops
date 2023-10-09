@@ -25,7 +25,7 @@ class Game():
                 self.set_user_move()
             
         except ValueError:
-            if self.user_move != '?':``
+            if self.user_move != '?':
                 print("Enter a number or '?'")
                 self.set_user_move()
 

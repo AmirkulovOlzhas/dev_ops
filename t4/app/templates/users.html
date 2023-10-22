@@ -1,7 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Users
+{% endblock %}
+
+{% block body %}
 {% for user in users %}
+  <table border="1">
   <tr>
     <td>{{ user.id }}</td>
     <td>{{ user.name }}</td>
     <td>{{ user.email }}</td>
   </tr>
+  </table>
 {% endfor %}
+{% endblock %}

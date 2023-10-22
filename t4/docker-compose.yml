@@ -1,7 +1,8 @@
 version: '3.8'
 services: 
   db:
-    build: ./postgres
+    container_name: pg_container
+    image: postgres:10-alpine
     restart: always
     volumes:
       - data:/var/lib/postgresql/data
@@ -11,6 +12,7 @@ services:
     ports:
       - 5432:5432
   pg_admin:
+    container_name: pgadmin4_container
     image: dpage/pgadmin4
     restart: always
     depends_on:
@@ -28,7 +30,8 @@ services:
       - db
     ports:
       - 3000:3000
-
+    volumes:
+      - ./app:/app
 volumes:
   data:
 

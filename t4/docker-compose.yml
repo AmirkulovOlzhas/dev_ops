@@ -24,14 +24,14 @@ services:
     ports:
       - "5050:5050" 
   app:
-    build: ./app
+    build: ./app/Docker
     restart: always
     depends_on:
       - db
     ports:
       - 3000:3000
     volumes:
-      - ./app:/app
+      - .:/app
 volumes:
   data:
 

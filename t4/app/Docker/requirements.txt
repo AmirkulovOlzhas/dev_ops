@@ -1,0 +1,7 @@
+flask
+flask-sqlalchemy
+flask-wtf
+flask-login
+flask-openid
+flask-mail
+psycopg2
